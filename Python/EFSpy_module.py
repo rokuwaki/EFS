@@ -318,7 +318,6 @@ class EFS():
                 wf['sazi'] = tmp2[1]
                 wf['deldist'] = geodetics.kilometer2degrees(tmp2[0] / 1E3)
 
-
             wf['dt'] = tr.stats.delta
             wf['syr'] = tr.stats.starttime.year
             wf['smon'] = tr.stats.starttime.month
