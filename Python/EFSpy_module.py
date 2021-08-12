@@ -303,10 +303,9 @@ class EFS():
             if 'invs' in locals():
 
                 try: # when obspy stream has station information (e.g., NIED F-net's SAC) and inventory file is unnecessary
-                    if tr.stats.sac.stla and tr.stats.sac.stlo and tr.stats.sac.stel:
-                        wf['slat'] = tr.stats.sac.stla
-                        wf['slon'] = tr.stats.sac.stlo
-                        wf['selev'] = tr.stats.sac.stel
+                    wf['slat'] = tr.stats.sac.stla
+                    wf['slon'] = tr.stats.sac.stlo
+                    wf['selev'] = tr.stats.sac.stel
 
                 except:
                     tmp1 = invs.select(station = tr.stats.station)
