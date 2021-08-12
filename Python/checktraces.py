@@ -24,7 +24,7 @@ def main():
     # load original original files
     st = obspy.read(original)
 
-    # check if the data conversion between original and EFS is OK
+    # randomly select one station to check identity
     j = np.random.randint(0,len(st)) # random station ID
     originalTrace = st[j].copy()
     wf = efs_data.waveforms[j]
